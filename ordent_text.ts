@@ -36,13 +36,20 @@ function steppingCount(steps: string[]) {
 
 // TASK #2
 function remainderCheck(a: number, b: number) {
-    if (a > b) {
-        if (a === 0) return 'NaN';
-        else return a % b;
+    if (a === 0 || b === 0) {
+        return 'NaN';
     }
 
-    if (b > a) {
-        if (b === 0) return 'NaN';
-        else return b % a;
+    return a > b ? a % b : b % a;
+}
+
+// TASK #3
+function combinedLetters(a: string, b: string, c: string) {
+    // expect all of the inputs to be the same length.
+    let combinedLetter = '';
+    for (let index = 0; index < a.length; index++) {
+        combinedLetter += `${a[index]}${b[index]}${c[index]}`;
     }
+
+    return combinedLetter;
 }

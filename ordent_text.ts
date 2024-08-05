@@ -53,3 +53,18 @@ function combinedLetters(a: string, b: string, c: string) {
 
     return combinedLetter;
 }
+
+// TASK #4
+function generateAcronym(name: string) {
+    name = name.toUpperCase();
+    name = name.replace('VON', 'von');
+
+    // Split the name based on whitespace and dash
+    let splittedName = name.split(/[\s\-]+/);
+    let acronym = '';
+    splittedName.map((e) => {
+        acronym += e[0];
+    });
+
+    return acronym;
+}
